@@ -40,7 +40,7 @@ public class AddVideo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_video);
 
-
+        progressDialog = new ProgressDialog(AddVideo.this);
 
         b = (Button) findViewById(R.id.button2);
         imageView = (ImageView) findViewById(R.id.imageView);
@@ -106,23 +106,22 @@ public class AddVideo extends AppCompatActivity {
      return MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
  }
  public void upload2(View view){
+
      new MyAsync().execute();
 
     }
 
 class MyAsync extends AsyncTask<Void,Integer,Void>{
     @Override
-    protected void onProgressUpdate(Integer... values) {
-        super.onProgressUpdate(values);
+    protected void onPreExecute() {
+        super.onPreExecute();
+        progressDialog.setTitle("zagruzka");
+        progressDialog.setMessage("jdite");
         progressDialog.show();
     }
 
     @Override
     protected Void doInBackground(Void... voids) {
-        progressDialog = new ProgressDialog(getApplicationContext());
-        progressDialog.setTitle("загрузка");
-        progressDialog.setMessage("Загрузка");
-        publishProgress();
 
         String content_type = getMimeType(file.getPath());
         OkHttpClient client = new OkHttpClient();
@@ -146,6 +145,11 @@ class MyAsync extends AsyncTask<Void,Integer,Void>{
         return null;
     }
 
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        progressDialog.cancel();
+    }
 }
 
 
