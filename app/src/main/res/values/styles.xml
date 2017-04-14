@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="HabraThemeButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/abutton</item>
+    </style>
+
+</resources>

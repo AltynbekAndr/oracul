@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TestKudaibergen</string>
+
+
+    <string-array name="category">
+        <item>ПДД</item>
+        <item>Коррупция</item>
+        <item>Нарушение в общ.месте</item>
+        <item>Насилие</item>
+        <item>Прочее</item>
+
+    </string-array>
+</resources>
