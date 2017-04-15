@@ -3,18 +3,139 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/title2"
     android:orientation="vertical"
-    tools:context="com.kg.testkudaibergen.Categori">
+    tools:context="com.kg.oracul.Categori"
+    android:background="#ffffff">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"></LinearLayout>
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="категории"
+            android:id="@+id/textView18"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="#fcfcfc"
+            android:layout_marginBottom="100dp"
+            android:typeface="serif"
+            android:background="#25ad2c" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ПДД"
+                android:id="@+id/textView13"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/pdd" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Коррупция"
+                android:id="@+id/textView14"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageView3"
+                android:src="@drawable/corrupcia" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Насилие"
+                android:id="@+id/textView15"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageView4"
+                android:src="@drawable/ic_do_not_disturb_24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Нарушение в общ.месте"
+                android:id="@+id/textView16"
+                android:textSize="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="35dp"
+                android:id="@+id/imageView5"
+                android:src="@drawable/narushenie" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="35dp" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="прочее..."
+                android:id="@+id/textView17"
+                android:textAlignment="center"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/myfragment"
-        android:name="com.kg.testkudaibergen.ActivityFragment"
+        android:name="com.kg.oracul.ActivityFragment"
         tools:layout="@layout/fragment_layout"/>
 </LinearLayout>

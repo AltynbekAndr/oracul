@@ -11,8 +11,5 @@
         android:left="4px"
         android:right="4px"
         android:top="7px" />
-    <stroke
-        android:width="3px"
 
-        android:color="#101032" />
 </shape>

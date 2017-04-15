@@ -28,8 +28,7 @@
                 android:text="повторить"
                 android:id="@+id/button"
                 android:textColor="#a5a0a0"
-                android:layout_marginBottom="50dp"
-                android:onClick="intentMainAct"/>
+                android:layout_marginBottom="50dp" />
 
     </LinearLayout>
 

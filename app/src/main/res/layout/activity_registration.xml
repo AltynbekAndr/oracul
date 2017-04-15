@@ -7,8 +7,67 @@
     tools:context="com.kg.oracul.Registration">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="registration"
-        android:id="@+id/textView" />
+        android:text="регистрация"
+        android:id="@+id/textView"
+        android:autoText="false"
+        android:background="#25ad2c"
+        android:textColor="#fcfcfc"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="введите свое имя"
+            android:id="@+id/textView21"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText3"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="введите номер телефона"
+            android:id="@+id/textView22"
+            android:textSize="18dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/editText4"
+            android:typeface="sans"
+            android:layout_marginBottom="50dp"
+            android:maxLength="10" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="регистрация"
+            android:id="@+id/button4"
+            style="@style/HabraThemeButton"
+            android:textSize="20dp"
+            android:textColor="#484747"
+            android:onClick="regisatration" />
+    </LinearLayout>
+
 </LinearLayout>

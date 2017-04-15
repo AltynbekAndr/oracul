@@ -9,7 +9,7 @@
         android:label="Oracul 2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity android:name=".Registration"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,12 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Categori"  android:screenOrientation="portrait"/>
-        <activity android:name=".AddVideo"  android:screenOrientation="portrait"/>
-        <activity android:name=".Chats"     android:screenOrientation="portrait"/>
-        <activity android:name=".Setttings" android:screenOrientation="portrait"/>
-        <activity android:name=".Registration" android:screenOrientation="portrait"/>
-        <activity android:name=".MyVideos" android:screenOrientation="portrait"/>
+        <activity android:name=".Categori"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AddVideo"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Chats"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Setttings"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MyVideos"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

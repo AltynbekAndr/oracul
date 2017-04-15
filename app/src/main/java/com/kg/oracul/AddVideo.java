@@ -11,7 +11,7 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -29,7 +29,7 @@ import okhttp3.Response;
 
 public class AddVideo extends AppCompatActivity {
    Spinner spinner;
-   Button b;
+   ImageButton b;
    private static final int SELECT_VIDEO = 5;
     ImageView imageView;
     TextView textView;
@@ -42,7 +42,7 @@ public class AddVideo extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(AddVideo.this);
 
-        b = (Button) findViewById(R.id.button2);
+        b = (ImageButton) findViewById(R.id.button2);
         imageView = (ImageView) findViewById(R.id.imageView);
         textView = (TextView) findViewById(R.id.textView8);
         spinner = (Spinner) findViewById(R.id.spinner);
@@ -86,15 +86,38 @@ public class AddVideo extends AppCompatActivity {
                 Drawable dr = getResources().getDrawable(R.drawable.video_icon2);
                 imageView.setImageDrawable(dr);
                 Uri u = data.getData();
-                textView.setText(u.getPath());
                 file = new File(u.getPath());
-
+                textView.setText(file.getName());
                 }
 
             }
         }
 
-
+    public void main(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+    public void addVideoIntent(View view){
+        Intent intent = new Intent(getApplicationContext(), AddVideo.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+    public void categories(View view){
+        Intent intent = new Intent(getApplicationContext(), Categori.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+    public void chats(View view){
+        Intent intent = new Intent(getApplicationContext(), Chats.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
+    public void prophile(View view){
+        Intent intent = new Intent(getApplicationContext(), Setttings.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+    }
 
 /*  public void upload() throws IOException
     {"http://env-2247367.jelastic.regruhosting.ru/talasagro.com/filee";
@@ -106,8 +129,12 @@ public class AddVideo extends AppCompatActivity {
      return MimeTypeMap.getSingleton().getMimeTypeFromExtension(extension);
  }
  public void upload2(View view){
+    if(file!=null&&file.getName()!=null){
+        new MyAsync().execute();
 
-     new MyAsync().execute();
+    }
+     Toast.makeText(getApplicationContext(),"Выберите видео для загрузки",Toast.LENGTH_SHORT).show();
+
 
     }
 
@@ -115,8 +142,8 @@ class MyAsync extends AsyncTask<Void,Integer,Void>{
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        progressDialog.setTitle("zagruzka");
-        progressDialog.setMessage("jdite");
+        progressDialog.setTitle("Отправка");
+        progressDialog.setMessage("ждите");
         progressDialog.show();
     }
 
