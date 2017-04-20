@@ -6,18 +6,6 @@
     android:orientation="vertical"
     tools:context="com.kg.oracul.Registration">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="регистрация"
-        android:id="@+id/textView"
-        android:autoText="false"
-        android:background="#25ad2c"
-        android:textColor="#fcfcfc"
-        android:textSize="30dp"
-        android:textAlignment="center"
-        android:typeface="serif" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -25,7 +13,8 @@
         android:paddingRight="15dp"
         android:paddingLeft="15dp"
         android:layout_marginTop="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +54,7 @@
             android:text="регистрация"
             android:id="@+id/button4"
             style="@style/HabraThemeButton"
-            android:textSize="20dp"
+            android:textSize="16dp"
             android:textColor="#484747"
             android:onClick="regisatration" />
     </LinearLayout>

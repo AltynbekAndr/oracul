@@ -8,155 +8,282 @@
     android:background="#ffffff"
     android:gravity="center|top">
 
-    <LinearLayout
+
+
+        <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-        android:layout_weight="1">
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
             <TextView
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Пожалуйста,проверьте Ваше интернет-соединение"
-                android:id="@+id/textView7"
-                android:gravity="center" />
-
-            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="повторить"
-                android:id="@+id/button"
-                android:textColor="#a5a0a0"
-                android:layout_marginBottom="50dp" />
+                android:text="MAIN"
+                android:id="@+id/textView43" />
+        </LinearLayout>
 
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/mainlinear1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton2"
+                android:src="@drawable/ic_account_balance_24dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Главная"
+                android:id="@+id/textView2"
+                android:textSize="11dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/mainlinear2"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton"
+                android:src="@drawable/domik2"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Главная"
+                android:id="@+id/textView"
+                android:textSize="11dp"
+                android:textColor="#e01937" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="categories"
+            android:id="@+id/categoriilinear1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton3"
+                android:src="@drawable/ic_view_module_24dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Категории"
+                android:id="@+id/textView3"
+                android:textSize="11dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/categoriilinear2"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton7"
+                android:src="@drawable/categorii2"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Категории"
+                android:id="@+id/textView7"
+                android:textSize="11dp"
+                android:textColor="#e01937" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="addVideoIntent"
+            android:id="@+id/addlinear1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton4"
+                android:src="@drawable/ic_note_add_24dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить"
+                android:id="@+id/textView4"
+                android:textSize="11dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/addlinear2"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton8"
+                android:src="@drawable/add2"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить"
+                android:id="@+id/textView18"
+                android:textSize="11dp"
+                android:textColor="#e01937" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="chats"
+            android:id="@+id/chatlinear1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton5"
+                android:src="@drawable/ic_forum_24dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Чаты"
+                android:id="@+id/textView5"
+                android:textSize="11dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/chatlinear2"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton9"
+                android:src="@drawable/chat2"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Чаты"
+                android:id="@+id/textView19"
+                android:textSize="11dp"
+                android:textColor="#e01937" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="profile"
+            android:id="@+id/profilelinear1">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton6"
+                android:src="@drawable/ic_person_outline_24dp"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профиль"
+                android:id="@+id/textView6"
+                android:textSize="11dp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="main"
+            android:id="@+id/profilelinear2"
+            android:visibility="gone">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageButton10"
+                android:src="@drawable/profile2"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Профиль"
+                android:id="@+id/textView20"
+                android:textSize="11dp"
+                android:textColor="#e01937" />
+        </LinearLayout>
     </LinearLayout>
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView2"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView3"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView4"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView5"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView6"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView7"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView8"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView9"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView10"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView11"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView12"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView13"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView14"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView15"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView16"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView17"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView18"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView19"
-        android:visibility="gone" />
-
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/webView20"
-        android:visibility="gone" />
-
-    <fragment
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/myfragment"
-    android:name="com.kg.oracul.ActivityFragment"
-    tools:layout="@layout/fragment_layout"/>
 
 </LinearLayout>

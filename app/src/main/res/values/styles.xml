@@ -7,8 +7,13 @@
     <style name="HabraThemeButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/abutton</item>
     </style>
+    <style name="LButton" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/lbutton</item>
+    </style>
     <style name="ImageButtonStyle" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/ibutton</item>
     </style>
-
+    <style name="ImageButtonStyle2" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/bbutton</item>
+    </style>
 </resources>
