@@ -4,16 +4,24 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
     </style>
+
     <style name="HabraThemeButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/abutton</item>
     </style>
+
     <style name="LButton" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/lbutton</item>
     </style>
+
     <style name="ImageButtonStyle" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/ibutton</item>
     </style>
+
     <style name="ImageButtonStyle2" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/bbutton</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

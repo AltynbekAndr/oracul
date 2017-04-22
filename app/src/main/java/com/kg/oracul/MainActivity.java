@@ -18,13 +18,18 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -49,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     Spinner spinner;
     String pathToShrift = "fonts/calibril.ttf";
-    Typeface  typefacen;
+    Typeface  typefacen;VideoView video;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,8 +66,40 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout main2 = (LinearLayout)findViewById(R.id.mainlinear2);
         main1.setVisibility(main1.GONE);
         main2.setVisibility(main2.VISIBLE);
+        video = (VideoView) findViewById(R.id.videoView);
 
-       }
+       try{
+        BufferedReader bf = new BufferedReader(new InputStreamReader(openFileInput("namefile.txt"),"UTF-8"));
+        BufferedReader bf2 = new BufferedReader(new InputStreamReader(openFileInput("description.txt"),"UTF-8"));
+        BufferedReader bf3 = new BufferedReader(new InputStreamReader(openFileInput("map.txt"),"UTF-8"));
+        String desc = bf2.readLine();
+        String map = bf3.readLine();
+        String str = bf.readLine();
+        bf.close();
+        bf2.close();
+        bf3.close();
+
+        if(str!=null){
+            TextView txt2 = (TextView) findViewById(R.id.textView43);
+            TextView txt3 = (TextView) findViewById(R.id.textView44);
+            txt2.setVisibility(txt2.VISIBLE);
+            txt3.setVisibility(txt3.VISIBLE);
+            video.setVisibility(video.VISIBLE);
+            txt3.setText(map);
+            txt2.setText(desc);
+            MediaController mediaController = new MediaController(this);
+            mediaController.setAnchorView(video);
+            video.setMediaController(mediaController);
+
+            video.setKeepScreenOn(true);
+            video.setVideoPath(str);
+            video.start();
+            video.requestFocus();
+        }}catch(IOException ex){}
+
+    }
+
+
 
     public void main(View view){
      setContentView(R.layout.activity_main);
@@ -206,7 +243,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(),CreateNewSubject.class);
         startActivity(intent);
     }
+    public void pddintent(View viwe){
+        Intent in = new Intent(getApplicationContext(),ListSubject.class);
+        startActivity(in);
 
+
+    }
 
     public void selectVideo(View view){
          Intent intent = new Intent();
@@ -220,6 +262,17 @@ public class MainActivity extends AppCompatActivity {
     }
     public void upload2(View view){
         if(file!=null&&file.getName()!=null){
+            EditText description = (EditText) findViewById(R.id.editText);
+            EditText map = (EditText) findViewById(R.id.editText2);
+            try {
+                BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(openFileOutput("description.txt", MODE_PRIVATE), "UTF-8"));
+                BufferedWriter buf2 = new BufferedWriter(new OutputStreamWriter(openFileOutput("map.txt", MODE_PRIVATE), "UTF-8"));
+                buf.write(description.getText().toString());
+                buf2.write(map.getText().toString());
+                buf.close();
+                buf2.close();
+
+            }catch(IOException ex){}
             new MyAsync().execute();
 
         }
@@ -240,6 +293,12 @@ public class MainActivity extends AppCompatActivity {
                 file = new File(u.getPath());
                 TextView textView = (TextView) findViewById(R.id.textView8);
                 textView.setText(file.getName());
+               try {
+                   BufferedWriter buf = new BufferedWriter(new OutputStreamWriter(openFileOutput("namefile.txt", MODE_PRIVATE), "UTF-8"));
+                   buf.write(u.getPath());
+                   buf.close();
+
+               }catch(IOException ex){}
                try {
                    BufferedWriter bf = new BufferedWriter(new OutputStreamWriter(openFileOutput("time.txt", MODE_PRIVATE), "UTF-8"));
                    BufferedWriter bf2 = new BufferedWriter(new OutputStreamWriter(openFileOutput("file.txt", MODE_PRIVATE), "UTF-8"));

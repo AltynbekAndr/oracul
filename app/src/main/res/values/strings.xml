@@ -10,4 +10,6 @@
         <item>Прочее</item>
 
     </string-array>
+    <string name="title_activity_chat_narushenie">ChatNarushenie</string>
+    <string name="title_activity_chat_prochee">ChatProchee</string>
 </resources>

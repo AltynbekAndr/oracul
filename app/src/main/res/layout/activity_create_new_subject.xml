@@ -80,6 +80,7 @@
             android:layout_height="wrap_content"
             android:text="создать"
             android:id="@+id/button"
-            style="@style/HabraThemeButton" />
+            style="@style/HabraThemeButton"
+            android:onClick="createSub" />
     </LinearLayout>
 </LinearLayout>

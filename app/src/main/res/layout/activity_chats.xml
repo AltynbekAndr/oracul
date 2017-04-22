@@ -25,7 +25,8 @@
             style="@style/LButton"
             android:layout_marginBottom="1dp"
             android:textAlignment="textStart"
-            android:paddingLeft="15dp" />
+            android:paddingLeft="15dp"
+            android:onClick="pddintent" />
 
         <TextView
             android:layout_width="match_parent"

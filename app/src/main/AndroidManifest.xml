@@ -43,7 +43,19 @@
         <activity android:name=".Pdd" />
         <activity android:name=".Corrupciya" />
         <activity android:name=".Nasilie" />
-        <activity android:name=".CreateNewSubject"></activity>
+        <activity android:name=".CreateNewSubject" />
+        <activity android:name=".ChatPdd" />
+        <activity android:name=".ChatCorupciya" />
+        <activity android:name=".ChatNasilie" />
+        <activity
+            android:name=".ChatNarushenie"
+            android:label="@string/title_activity_chat_narushenie"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ChatProchee"
+            android:label="@string/title_activity_chat_prochee"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ListSubject"></activity>
     </application>
 
 </manifest>
