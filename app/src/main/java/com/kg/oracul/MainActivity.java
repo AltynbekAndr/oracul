@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     ProgressDialog progressDialog;
     Spinner spinner;
     String pathToShrift = "fonts/calibril.ttf";
-    Typeface  typefacen;VideoView video;
+    Typeface  typefacen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,36 +66,17 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout main2 = (LinearLayout)findViewById(R.id.mainlinear2);
         main1.setVisibility(main1.GONE);
         main2.setVisibility(main2.VISIBLE);
-        video = (VideoView) findViewById(R.id.videoView);
+       WebView wv = (WebView)findViewById(R.id.webView);
+        wv.getSettings().setJavaScriptEnabled(true);
+        wv.loadUrl("http://www.youtube.com");
+        wv.setWebViewClient(new WebViewClient(){
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                return super.shouldOverrideUrlLoading(view, url);
+            }
+        });
 
-       try{
-        BufferedReader bf = new BufferedReader(new InputStreamReader(openFileInput("namefile.txt"),"UTF-8"));
-        BufferedReader bf2 = new BufferedReader(new InputStreamReader(openFileInput("description.txt"),"UTF-8"));
-        BufferedReader bf3 = new BufferedReader(new InputStreamReader(openFileInput("map.txt"),"UTF-8"));
-        String desc = bf2.readLine();
-        String map = bf3.readLine();
-        String str = bf.readLine();
-        bf.close();
-        bf2.close();
-        bf3.close();
 
-        if(str!=null){
-            TextView txt2 = (TextView) findViewById(R.id.textView43);
-            TextView txt3 = (TextView) findViewById(R.id.textView44);
-            txt2.setVisibility(txt2.VISIBLE);
-            txt3.setVisibility(txt3.VISIBLE);
-            video.setVisibility(video.VISIBLE);
-            txt3.setText(map);
-            txt2.setText(desc);
-            MediaController mediaController = new MediaController(this);
-            mediaController.setAnchorView(video);
-            video.setMediaController(mediaController);
-
-            video.setKeepScreenOn(true);
-            video.setVideoPath(str);
-            video.start();
-            video.requestFocus();
-        }}catch(IOException ex){}
 
     }
 
